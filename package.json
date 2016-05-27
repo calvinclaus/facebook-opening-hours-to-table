@@ -1,0 +1,32 @@
+{
+  "name": "facebook-opening-hours-to-table",
+  "version": "1.0.0",
+  "description": "Fetches opening hour data from Facebook, and returns an html table with the opening hours.",
+  "main": "src/entry.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvinclaus/faceboook-opening-hours-to-table.git"
+  },
+  "keywords": [
+    "facebook",
+    "opening",
+    "hours",
+    "html",
+    "table"
+  ],
+  "author": "Calvin <calvinclaus@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calvinclaus/faceboook-opening-hours-to-table/issues"
+  },
+  "homepage": "https://github.com/calvinclaus/faceboook-opening-hours-to-table#readme",
+  "devDependencies": {
+    "babel-cli": "^6.9.0"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4"
+  }
+}
