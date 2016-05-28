@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-export function getTableWithInervals(intervals) {
+export function getTableWithIntervals(intervals) {
   return getTableWithIntervalsAnd$(intervals, $);
 
 }
