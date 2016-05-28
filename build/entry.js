@@ -1,14 +1,5 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("jquery"));
-	else if(typeof define === 'function' && define.amd)
-		define("facebook-opening-hours-table", ["jquery"], factory);
-	else if(typeof exports === 'object')
-		exports["facebook-opening-hours-table"] = factory(require("jquery"));
-	else
-		root["facebook-opening-hours-table"] = factory(root["jquery"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
-return /******/ (function(modules) { // webpackBootstrap
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -85,9 +76,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function getTableWithTokenAndHoursRequester(token, appURL, callback, translationDict, hoursRequester) {
-	  getIntervalWithTokenAndHoursRequester(token, appURL, function (intervals, hoursRequester) {
+	  getIntervalWithTokenAndHoursRequester(token, appURL, function (intervals) {
 	    callback((0, _getTableWithIntervals.getTableWithIntervals)(intervals));
-	  }, translationDict);
+	  }, translationDict, hoursRequester);
 	}
 
 	function getIntervalWithToken(token, appURL, callback, translationDict) {
@@ -185,7 +176,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+	module.exports = require("jquery");
 
 /***/ },
 /* 2 */
@@ -229,6 +220,4 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }
-/******/ ])
-});
-;
+/******/ ]);

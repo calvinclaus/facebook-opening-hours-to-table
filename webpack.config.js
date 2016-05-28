@@ -4,8 +4,7 @@ module.exports = {
     filename: 'entry.js',
     path: './build',
     library: "facebook-opening-hours-table",
-    libraryTarget: 'umd',
-    umdNamedDefine: true
+    libraryTarget: "commonjs2"
   },
   externals: {
     "jquery": "jquery",

@@ -9,9 +9,9 @@ export function getIntervalWithTokenAndHoursRequester(token, appURL, callback, t
 }
 
 export function getTableWithTokenAndHoursRequester(token, appURL, callback, translationDict, hoursRequester) {
-  getIntervalWithTokenAndHoursRequester(token, appURL, function(intervals, hoursRequester) {
+  getIntervalWithTokenAndHoursRequester(token, appURL, function(intervals) {
     callback(getTableWithIntervals(intervals));
-  }, translationDict);
+  }, translationDict, hoursRequester);
 }
 
 

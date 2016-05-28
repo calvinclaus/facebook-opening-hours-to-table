@@ -1,8 +1,8 @@
 {
   "name": "facebook-opening-hours-to-table",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Fetches opening hour data from Facebook, and returns an html table with the opening hours.",
-  "main": "build/bundle.js",
+  "main": "build/entry.js",
   "scripts": {
     "test": "mocha './src/**/*.test.js' --watch  --compilers js:babel-core/register",
     "clearBuild": "rimraf build",
