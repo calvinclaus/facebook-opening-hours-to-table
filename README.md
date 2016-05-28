@@ -8,6 +8,7 @@ This package is distributed via npm:
 ```
 npm i facebook-opening-hours-to-table
 ```
+Unfortunately it depends on jquery for now.
 
 
 ## Usage
