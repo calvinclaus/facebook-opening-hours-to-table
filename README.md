@@ -11,6 +11,26 @@ npm i facebook-opening-hours-to-table
 Unfortunately it depends on jquery for now.
 
 ##Example
+Facebook hours-data looks like this:
+```json
+{
+  "mon_1_open": "11:00",
+  "mon_1_close": "20:30",
+  "tue_1_open": "11:00",
+  "tue_1_close": "20:30",
+  "wed_1_open": "11:00",
+  "wed_1_close": "20:30",
+  "thu_1_open": "11:00",
+  "thu_1_close": "21:00",
+  "fri_1_open": "11:00",
+  "fri_1_close": "21:00",
+  "sat_1_open": "10:30",
+  "sat_1_close": "20:30",
+  "sun_1_open": "12:00",
+  "sun_1_close": "19:00"
+}
+```
+And this library creates: 
 <table><tbody><tr><td><span class="days">mon - wed: </span></td><td><span class="numbers">11:00 - 20:30</span></td></tr><tr><td><span class="days">thu - fri: </span></td><td><span class="numbers">11:00 - 21:00</span></td></tr><tr><td><span class="days">sat: </span></td><td><span class="numbers">10:30 - 20:30</span></td></tr><tr><td><span class="days">sun: </span></td><td><span class="numbers">12:00 - 19:00</span></td></tr></tbody></table>
 
 ## Usage
