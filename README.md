@@ -28,7 +28,7 @@ getTableWithToken(token, appURL, function (table) {
 }, translationDict);
 ```
 
-If you do not care for the table and just want the [intervals](#Intervals) data use getIntervalWithToken:
+If you do not care for the table and just want the [intervals](#intervals) data use getIntervalWithToken:
 ```javascript
 import { getIntervalWithToken } from facebook-opening-hours-to-table;
 //...
