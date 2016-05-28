@@ -35,6 +35,9 @@ And this library creates:
 
 ## Usage
 
+*Getting the table*
+Use these methods if you want an html table.
+
 If you already have the opening hours data from Facebook use getTableWithHoursData to get a table:
 ```javascript
 import { getTableWithHoursData } from facebook-opening-hours-to-table;
@@ -51,8 +54,17 @@ getTableWithToken(token, appURL, function (table) {
   //do stuff with table
 }, translationDict);
 ```
+*Getting Intervals Data*
+Use these methods if you do not care for the table and just want the [intervals](#intervals) data.
 
-If you do not care for the table and just want the [intervals](#intervals) data use getIntervalWithToken:
+If you already have the opening hours data from Facebook use getIntervalsWithHoursData to get to the raw [intervals](#intervals) data:
+```javascript
+import { getIntervalWithHoursData } from facebook-opening-hours-to-table;
+//...
+var intervals = getIntervalWithHoursData(your-fb-hours-data, translationDict);
+//do stuff with intervals
+```
+If you want the library to fetch the opening hours data for you, supply token and appURL to getIntervalWithToken:
 ```javascript
 import { getIntervalWithToken } from facebook-opening-hours-to-table;
 //...
@@ -61,14 +73,6 @@ getIntervalWithToken(token, appURL, function (intervals) {
 }, translationDict);
 ```
 
-
-If you already have the Facebook opening hours data use getIntervalsWithHoursData to get to the raw intervals data:
-```javascript
-import { getIntervalWithHoursData } from facebook-opening-hours-to-table;
-//...
-var intervals = getIntervalWithHoursData(your-fb-hours-data, translationDict);
-//do stuff with intervals
-```
 
 ##Intervals:
 Intervals is an array of intervals that is created form the opening hours data. You can use it, if you do not want a table to be generated from the Facebook hours data, but still want days with equal opening hours be compressed into one array entry:
