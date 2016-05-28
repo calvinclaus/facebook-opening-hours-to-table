@@ -16,7 +16,7 @@ If you already have the opening hours data from Facebook use getTableWithHoursDa
 ```javascript
 import { getTableWithHoursData } from facebook-opening-hours-to-table;
 //...
-const table = getTableWithHoursData(hours-data-from-facebook);
+const table = getTableWithHoursData(your-fb-hours-data);
 ```
 
 If you want the library to fetch the opening hours data for you, supply token and appURL to getTableWithToken:
@@ -42,7 +42,7 @@ If you already have the Facebook opening hours data use getIntervalsWithHoursDat
 ```javascript
 import { getIntervalWithHoursData } from facebook-opening-hours-to-table;
 //...
-var intervals = getIntervalWithHoursData(hours-from-fb, translationDict);
+var intervals = getIntervalWithHoursData(your-fb-hours-data, translationDict);
 //do stuff with intervals
 ```
 
