@@ -1,5 +1,5 @@
 import expect from "expect";
-import { getIntervalWithTokenAndHoursRequester } from "./injectable.js";
+import { getIntervalWithTokenAndHoursRequester } from "./entry.js";
 import { hoursRequester } from "./mocks.js";
 import intervals from "./intervals.mock.json";
 
