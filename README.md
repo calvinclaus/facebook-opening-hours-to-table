@@ -35,7 +35,7 @@ And this library creates:
 
 ## Usage
 
-*Getting the table*
+#Getting the table
 Use these methods if you want an html table.
 
 If you already have the opening hours data from Facebook use getTableWithHoursData to get a table:
@@ -54,7 +54,7 @@ getTableWithToken(token, appURL, function (table) {
   //do stuff with table
 }, translationDict);
 ```
-*Getting Intervals Data*
+#Getting Intervals Data
 Use these methods if you do not care for the table and just want the [intervals](#intervals) data.
 
 If you already have the opening hours data from Facebook use getIntervalsWithHoursData to get to the raw [intervals](#intervals) data:
