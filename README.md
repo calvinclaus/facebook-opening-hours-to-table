@@ -10,7 +10,7 @@ npm i facebook-opening-hours-to-table
 ```
 Unfortunately it depends on jquery for now.
 
-##Example
+##Demo
 Facebook hours-data looks like this:
 ```json
 {
