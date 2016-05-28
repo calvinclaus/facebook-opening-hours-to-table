@@ -1,0 +1,16 @@
+{
+  "mon_1_open": "11:00",
+  "mon_1_close": "20:30",
+  "tue_1_open": "11:00",
+  "tue_1_close": "20:30",
+  "wed_1_open": "11:00",
+  "wed_1_close": "20:30",
+  "thu_1_open": "11:00",
+  "thu_1_close": "21:00",
+  "fri_1_open": "11:00",
+  "fri_1_close": "21:00",
+  "sat_1_open": "10:30",
+  "sat_1_close": "20:30",
+  "sun_1_open": "12:00",
+  "sun_1_close": "19:00"
+}

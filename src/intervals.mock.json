@@ -1,0 +1,26 @@
+[
+  { 
+    "open": "11:00",
+    "close": "20:30",
+    "from": "mon",
+    "to": "wed" 
+  },
+  {
+    "open": "11:00",
+    "close": "21:00",
+    "from": "thu",
+    "to": "fri" 
+  }, 
+  { 
+    "open": "10:30",
+    "close": "20:30",
+    "from": "sat",
+    "to": "sat" 
+  },
+  {
+    "open": "12:00",
+    "close": "19:00",
+    "from": "sun",
+    "to": "sun" 
+  } 
+]
