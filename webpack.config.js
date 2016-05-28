@@ -1,8 +1,14 @@
 module.exports = {
   entry: './src/entry.js',
   output: {
-    filename: 'bundle.js',
-    path: './build'
+    filename: 'entry.js',
+    path: './build',
+    library: "facebook-opening-hours-table",
+    libraryTarget: 'umd',
+    umdNamedDefine: true
+  },
+  externals: {
+    "jquery": "jquery",
   },
   module: {
     loaders: [

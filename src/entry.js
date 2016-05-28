@@ -1,4 +1,5 @@
-import $ from 'jquery';
+import $ from "jquery";
+import { getTableWithIntervals } from './getTableWithIntervals.js';
 
 //This is so we can inject an hoursRequester into getIntervalWithTokenAndHoursRequester for testing
 export function getIntervalWithTokenAndHoursRequester(token, appURL, callback, translationDict, hoursRequester) {
@@ -6,7 +7,6 @@ export function getIntervalWithTokenAndHoursRequester(token, appURL, callback, t
     callback(getTranslatedIntervals(hours, translationDict));
   });
 }
-
 
 export function getTableWithTokenAndHoursRequester(token, appURL, callback, translationDict, hoursRequester) {
   getIntervalWithTokenAndHoursRequester(token, appURL, function(intervals, hoursRequester) {
