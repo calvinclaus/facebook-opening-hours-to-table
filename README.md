@@ -10,6 +10,8 @@ npm i facebook-opening-hours-to-table
 ```
 Unfortunately it depends on jquery for now.
 
+##Example
+<table><tbody><tr><td><span class="days">mon - wed: </span></td><td><span class="numbers">11:00 - 20:30</span></td></tr><tr><td><span class="days">thu - fri: </span></td><td><span class="numbers">11:00 - 21:00</span></td></tr><tr><td><span class="days">sat: </span></td><td><span class="numbers">10:30 - 20:30</span></td></tr><tr><td><span class="days">sun: </span></td><td><span class="numbers">12:00 - 19:00</span></td></tr></tbody></table>
 
 ## Usage
 
