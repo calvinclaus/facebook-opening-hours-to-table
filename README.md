@@ -46,6 +46,7 @@ If you want the library to fetch the opening hours data for you, supply token an
 ```javascript
 import { getTableWithToken } from facebook-opening-hours-to-table;
 //...
+const appURL = "freshberrywien" //The name of the page whose opening hours you are getting
 getTableWithToken(token, appURL, function (table) {
   //do stuff with table
 }, translationDict);
