@@ -105,4 +105,5 @@ If not, you can supply a dictionary like so:
 translationDict = {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"};
 ```
 
-
+## Other
+This library was crafted by [Calvin Claus](https://twitter.com/calvin_claus).
