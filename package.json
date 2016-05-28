@@ -1,6 +1,6 @@
 {
   "name": "facebook-opening-hours-to-table",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fetches opening hour data from Facebook, and returns an html table with the opening hours.",
   "main": "build/bundle.js",
   "scripts": {
