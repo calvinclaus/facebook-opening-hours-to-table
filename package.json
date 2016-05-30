@@ -1,6 +1,6 @@
 {
   "name": "facebook-opening-hours-to-table",
-  "version": "1.0.11",
+  "version": "2.0.00",
   "description": "Generates an html table from Facebook page opening hours data, such that days with equal opening hours are on one table row.  ",
   "main": "build/entry.js",
   "scripts": {
