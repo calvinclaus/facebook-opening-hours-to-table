@@ -18,7 +18,7 @@ You can also grab the build/entry.js file in the GitHub Repo:
 
 ```html
 <script src="entry.js"></script>
-//Functions now at window.facebookOpeningHoursToTable.getTableWithHours(hours, translationDict);
+//Functions now at facebookOpeningHoursToTable.getTableWithHours(hours, translationDict);
 ```
 
 
