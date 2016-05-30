@@ -1,25 +1,22 @@
 import $ from "jquery";
 
 export function getTableWithIntervals(intervals) {
-  return getTableWithIntervalsAnd$(intervals, $);
-
-}
-
-export function getTableWithIntervalsAnd$(intervals, $) {
-  var $table = $(document.createElement('table'));
+  var table = document.createElement('table');
+  var tbody = document.createElement('tbody');
+  table.appendChild(tbody)
   for (var i = 0; i < intervals.length; i++) {
-    var $tr = $(document.createElement('tr'));
-    var $tdLeft = $(document.createElement('td'));
-    var $tdRight = $(document.createElement('td'));
+    var tr = document.createElement('tr');
+    var tdLeft = document.createElement('td');
+    var tdRight = document.createElement('td');
     if (intervals[i].from !== intervals[i].to) {
-      $tdLeft.html('<span class="days">' + intervals[i].from + " - " + intervals[i].to + ': </span>');
+      tdLeft.innerHTML = '<span class="days">' + intervals[i].from + " - " + intervals[i].to + ': </span>';
     } else {
-      $tdLeft.html('<span class="days">' + intervals[i].from + ': </span>');
+      tdLeft.innerHTML = '<span class="days">' + intervals[i].from + ': </span>';
     }
-    $tdRight.html('<span class="numbers">' + intervals[i].open + " - " + intervals[i].close + '</span>');
-    $tr.append($tdLeft);
-    $tr.append($tdRight);
-    $table.append($tr);
+    tdRight.innerHTML = '<span class="numbers">' + intervals[i].open + " - " + intervals[i].close + '</span>';
+    tr.appendChild(tdLeft);
+    tr.appendChild(tdRight);
+    tbody.appendChild(tr);
   }
-  return $table[0];
+  return table;
 }
