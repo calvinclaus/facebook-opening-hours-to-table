@@ -138,10 +138,10 @@ translationDict = {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "
 		}
 	})
 	.done(function( msg ) {
-    var hours = msg.hours;
-    var translationDict = {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"};
-    var table = facebookOpeningHoursToTable.getTableWithHours(hours, translationDict);
-    document.body.appendChild(table);
+      var hours = msg.hours;
+      var translationDict = {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"};
+      var table = facebookOpeningHoursToTable.getTableWithHours(hours, translationDict);
+      document.body.appendChild(table);
 	})
 ```
 *Note: you can use any ajax-request library. I chose to use jQuery in this example. This library does NOT depend on jQuery*
