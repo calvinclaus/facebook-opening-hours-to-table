@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 export function getTableWithIntervals(intervals) {
   var table = document.createElement('table');
   var tbody = document.createElement('tbody');

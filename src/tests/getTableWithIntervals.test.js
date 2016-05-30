@@ -3,8 +3,8 @@ import expectElement from 'expect-element'
 expect.extend(expectElement)
 
 import jsdom from "mocha-jsdom";
-import { getTableWithIntervals } from './getTableWithIntervals.js';
-import intervals from "./intervals.mock.json";
+import { getTableWithIntervals } from '../getTableWithIntervals.js';
+import intervals from "./mocks/intervals.mock.json";
 
 describe('getTableWithIntervals', function () {
   jsdom();
