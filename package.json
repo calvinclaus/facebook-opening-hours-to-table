@@ -1,7 +1,7 @@
 {
   "name": "facebook-opening-hours-to-table",
   "version": "1.0.11",
-  "description": "Fetches opening hour data from Facebook, and returns an html table with the opening hours.",
+  "description": "Generates an html table from Facebook page opening hours data, such that days with equal opening hours are on one table row.  ",
   "main": "build/entry.js",
   "scripts": {
     "test": "mocha './src/**/*.test.js' --watch  --compilers js:babel-core/register",
