@@ -7,9 +7,6 @@ module.exports = {
     libraryTarget: "umd",
     umdNamedDefine: true
   },
-  externals: {
-    "jquery": "jquery",
-  },
   module: {
     loaders: [
       {
