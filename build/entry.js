@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("jquery"));
+		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("facebookOpeningHoursToTable", ["jquery"], factory);
+		define("facebookOpeningHoursToTable", [], factory);
 	else if(typeof exports === 'object')
-		exports["facebookOpeningHoursToTable"] = factory(require("jquery"));
+		exports["facebookOpeningHoursToTable"] = factory();
 	else
-		root["facebookOpeningHoursToTable"] = factory(root["jquery"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+		root["facebookOpeningHoursToTable"] = factory();
+})(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -62,47 +62,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	exports.getIntervalWithTokenAndHoursRequester = getIntervalWithTokenAndHoursRequester;
-	exports.getTableWithTokenAndHoursRequester = getTableWithTokenAndHoursRequester;
-	exports.getIntervalWithToken = getIntervalWithToken;
-	exports.getTableWithToken = getTableWithToken;
-	exports.getTableWithHoursData = getTableWithHoursData;
-	exports.getIntervalWithHoursData = getIntervalWithHoursData;
+	exports.getTableWithHours = getTableWithHours;
+	exports.getIntervalsWithHours = getIntervalsWithHours;
 
-	var _jquery = __webpack_require__(1);
+	var _getTableWithIntervals = __webpack_require__(1);
 
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _getTableWithIntervals = __webpack_require__(2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	//This is so we can inject an hoursRequester into getIntervalWithTokenAndHoursRequester for testing
-	function getIntervalWithTokenAndHoursRequester(token, appURL, callback, translationDict, hoursRequester) {
-	  hoursRequester(token, appURL, function (hours) {
-	    callback(getTranslatedIntervals(hours, translationDict));
-	  });
+	function getTableWithHours(hours, translationDict) {
+	  return (0, _getTableWithIntervals.getTableWithIntervals)(getIntervalsWithHours(hours, translationDict));
 	}
 
-	function getTableWithTokenAndHoursRequester(token, appURL, callback, translationDict, hoursRequester) {
-	  getIntervalWithTokenAndHoursRequester(token, appURL, function (intervals) {
-	    callback((0, _getTableWithIntervals.getTableWithIntervals)(intervals));
-	  }, translationDict, hoursRequester);
-	}
-
-	function getIntervalWithToken(token, appURL, callback, translationDict) {
-	  getIntervalWithTokenAndHoursRequester(token, appURL, callback, translationDict, fetchHours);
-	}
-
-	function getTableWithToken(token, appURL, callback, translationDict) {
-	  getTableWithTokenAndHoursRequester(token, appURL, callback, translationDict, fetchHours);
-	}
-
-	function getTableWithHoursData(hours, translationDict) {
-	  return (0, _getTableWithIntervals.getTableWithIntervals)(getIntervalWithHoursData(hours, translationDict));
-	}
-
-	function getIntervalWithHoursData(hours, translationDict) {
+	function getIntervalsWithHours(hours, translationDict) {
 	  return getTranslatedIntervals(hours, translationDict, translationDict);
 	}
 
@@ -112,28 +81,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return intervals;
 	}
 
-	function fetchHours(token, appURL, callback) {
-	  _jquery2.default.ajax({
-	    method: "GET",
-	    url: "https://graph.facebook.com/" + appURL,
-	    data: {
-	      access_token: token,
-	      fields: "hours"
-	    }
-	  }).done(function (msg) {
-	    callback(msg.hours);
-	  }).fail(function (msg) {
-	    console.error("Failed to fetch hours data", msg);
-	  });
-	}
-
 	function getIntervals(hours) {
 	  var days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 	  var intervals = [];
 	  var prevInterval = {};
 	  for (var i = 0; i < days.length; i++) {
 	    var thisDay = getDayFromHours(hours, days[i]);
-	    if (!prevInterval.from) {
+	    if (i == 0) {
 	      //is this the first go?
 	      prevInterval = getNewInterval(thisDay);
 	    } else {
@@ -149,7 +103,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return intervals;
 	}
 
-	//German {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"}
+	//German: {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"}
 	function translateIntervals(intervals, translation) {
 	  if ((typeof translation === "undefined" ? "undefined" : _typeof(translation)) == ( true ? "undefined" : _typeof(undefined))) return intervals;
 	  for (var i = 0; i < intervals.length; i++) {
@@ -185,25 +139,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
-
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.getTableWithIntervals = getTableWithIntervals;
-
-	var _jquery = __webpack_require__(1);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 	function getTableWithIntervals(intervals) {
 	  var table = document.createElement('table');
 	  var tbody = document.createElement('tbody');
