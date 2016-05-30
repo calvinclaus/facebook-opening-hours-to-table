@@ -1,14 +1,26 @@
 # faceboook-opening-hours-to-table
-Fetches opening hour data from Facebook, and returns an html table with the opening hours such that days with equal opening hours are on one table row.
+Generates an html table from Facebook page opening hours data, such that days with equal opening hours are on one table row.
 
 ## Installation
+
+###npm
 
 This package is distributed via npm:
 
 ```
 npm i facebook-opening-hours-to-table
 ```
-Unfortunately it depends on jquery for now.
+
+It has no dependencies.
+
+###Browser
+You can also grab the build/entry.js file in the GitHub Repo:
+
+```html
+<script src="entry.js"></script>
+//Functions now at window.facebookOpeningHoursToTable.getTableWithHours(hours, translationDict);
+```
+
 
 ##Demo
 Facebook hours-data looks like this:
@@ -36,45 +48,28 @@ And this library creates:
 ## Usage
 
 ###Getting the table
-Use these methods if you want an html table.
+Use this method if you want an html table.
 
-If you already have the opening hours data from Facebook use getTableWithHoursData to get a table:
+Fetch the opening hours data from Facebook and pass it to getTableWithHours.
 ```javascript
-import { getTableWithHoursData } from facebook-opening-hours-to-table;
+import { getTableWithHours } from Facebook-opening-hours-to-table;
 //...
-const table = getTableWithHoursData(your-fb-hours-data);
+const table = getTableWithHoursData(yourFBHoursData, translationDict);
+//do stuff with table
 ```
 
-If you want the library to fetch the opening hours data for you, supply token and appURL to getTableWithToken:
-```javascript
-import { getTableWithToken } from facebook-opening-hours-to-table;
-//...
-const appURL = "freshberrywien" //The name of the page whose opening hours you are getting
-getTableWithToken(token, appURL, function (table) {
-  //do stuff with table
-}, translationDict);
-```
 ###Getting Intervals Data
-Use these methods if you do not care for the table and just want the [intervals](#intervals) data.
+Use this method if you do not care for the table and just want the [intervals](#intervals) data.
 
-If you already have the opening hours data from Facebook use getIntervalsWithHoursData to get to the raw [intervals](#intervals) data:
+Fetch the opening hours data from Facebook and pass it to getIntervalsWithHours to get to the raw [intervals](#intervals) data:
 ```javascript
-import { getIntervalWithHoursData } from facebook-opening-hours-to-table;
+import { getIntervalsWithHours } from facebook-opening-hours-to-table;
 //...
-var intervals = getIntervalWithHoursData(your-fb-hours-data, translationDict);
+var intervals = getIntervalsWithHours(yourFBHoursData, translationDict);
 //do stuff with intervals
 ```
-If you want the library to fetch the opening hours data for you, supply token and appURL to getIntervalWithToken:
-```javascript
-import { getIntervalWithToken } from facebook-opening-hours-to-table;
-//...
-getIntervalWithToken(token, appURL, function (intervals) {
-  //do stuff with intervals
-}, translationDict);
-```
 
-
-##Intervals:
+###Intervals:
 Intervals is an array of intervals that is created form the opening hours data. You can use it, if you do not want a table to be generated from the Facebook hours data, but still want days with equal opening hours be compressed into one array entry:
 
 ```javascript
@@ -125,12 +120,33 @@ var hours = {
 }
 ```
 
-##Translation:
+###Translation:
 Each method takes translationDict as an argument. This argument can be omitted if you are happy with Facebooks default "mon, tue,...".
 If not, you can supply a dictionary like so:
 ```javascript
 translationDict = {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"};
 ```
 
+##Example Usage
+```javascript
+	$.ajax({
+		method: "GET",
+		url: "https://graph.facebook.com/QuellenStr", //Schnitzelhaus Vienna :)
+		data : {
+			access_token: token,
+			fields: "hours"
+		}
+	})
+	.done(function( msg ) {
+    var hours = msg.hours;
+    var translationDict = {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"};
+    var table = facebookOpeningHoursToTable.getTableWithHours(hours, translationDict);
+    document.body.appendChild(table);
+	})
+```
+*Note: you can use any ajax-request library. I chose to use jQuery in this example. This library does NOT depend on jQuery*
+
+
 ## Other
 This library was crafted with care by [Calvin Claus](https://twitter.com/calvin_claus).
+*If this helped you out, make my day by letting me know!*
