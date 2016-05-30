@@ -149,4 +149,5 @@ translationDict = {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "
 
 ## Other
 This library was crafted with care by [Calvin Claus](https://twitter.com/calvin_claus).
-*If this helped you out, make my day by letting me know!*
+
+If this helped you out, make my day by [letting me know](https://twitter.com/calvin_claus)!
