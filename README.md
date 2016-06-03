@@ -1,4 +1,4 @@
-# faceboook-opening-hours-to-table
+# facebook-opening-hours-to-table
 Generates an html table from Facebook page opening hours data, such that days with equal opening hours are on one table row.
 
 [![travis build](https://img.shields.io/travis/calvinclaus/facebook-opening-hours-to-table.svg?style=flat)](https://travis-ci.org/calvinclaus/facebook-opening-hours-to-table)
