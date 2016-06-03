@@ -38,6 +38,7 @@
     "cz-conventional-changelog": "^1.1.6",
     "expect": "^1.20.1",
     "expect-element": "^1.1.1",
+    "ghooks": "^1.2.1",
     "jsdom": "^9.2.0",
     "mocha": "^2.4.5",
     "mocha-jsdom": "^1.1.0",
@@ -48,5 +49,10 @@
   "dependencies": {},
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test:single"
+    }
   }
 }
