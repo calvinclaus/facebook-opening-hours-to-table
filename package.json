@@ -8,7 +8,7 @@
     "test:single:o": "npm run test:single && open coverage/lcov-report/index.html",
     "check-coverage": "npm run test:single && npm run check-coverage-uptodate-reports",
     "check-coverage-uptodate-reports": "istanbul check-coverage --lines 100",
-    "report-coverage":, "cat ./coverage/lcov.info | codecov",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
 
     "build": "npm run clearBuild && webpack",
     "clearBuild": "rimraf build",
