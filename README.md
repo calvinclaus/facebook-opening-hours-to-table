@@ -1,6 +1,12 @@
 # faceboook-opening-hours-to-table
 Generates an html table from Facebook page opening hours data, such that days with equal opening hours are on one table row.
 
+[![travis build](https://img.shields.io/travis/calvinclaus/facebook-opening-hours-to-table.svg?style=flat)](https://travis-ci.org/calvinclaus/facebook-opening-hours-to-table)
+[![codecov coverage](https://img.shields.io/codecov/c/github/calvinclaus/facebook-opening-hours-to-table.svg?style=flat)](https://codecov.io/github/calvinclaus/facebook-opening-hours-to-table)
+[![version](https://img.shields.io/npm/v/facebook-opening-hours-to-table.svg?style=flat)](http://npm.im/facebook-opening-hours-to-table)
+[![downloads](https://img.shields.io/npm/dm/facebook-opening-hours-to-table.svg?style=flat)](http://npm-stat.com/charts.html?package=facebook-opening-hours-to-table&from=2015-08-01)
+[![MIT License](https://img.shields.io/npm/l/facebook-opening-hours-to-table.svg?style=flat)](http://opensource.org/licenses/MIT)
+
 ## Installation
 
 ###npm
