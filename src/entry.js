@@ -5,11 +5,9 @@ export function getTableWithHours(hours, translationDict) {
   return getTableWithIntervals(getIntervalsWithHours(hours, translationDict));
 }
 
-
 export function getIntervalsWithHours(hours, translationDict) {
   return getTranslatedIntervals(hours, translationDict, translationDict);
 }
-
 
 function getTranslatedIntervals(hours, translationDict) {
   var intervals = getIntervals(hours);
