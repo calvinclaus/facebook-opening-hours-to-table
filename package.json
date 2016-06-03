@@ -9,10 +9,11 @@
     "check-coverage": "npm run test:single && npm run check-coverage-uptodate-reports",
     "check-coverage-uptodate-reports": "istanbul check-coverage --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-
-    "build": "npm run clearBuild && webpack",
-    "clearBuild": "rimraf build",
-
+    "prebuild": "rimraf build",
+    "build": "npm-run-all --parallel build:*",
+    "build:main": "webpack",
+    "build:umd": "webpack --output-filename entry.umd.js",
+    "build:umd.min": "webpack --output-filename entry.umd.min.js -p",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "commit": "git-cz"
   },
@@ -50,6 +51,7 @@
     "jsdom": "^9.2.0",
     "mocha": "^2.4.5",
     "mocha-jsdom": "^1.1.0",
+    "npm-run-all": "^2.1.1",
     "rimraf": "^2.5.2",
     "semantic-release": "^4.3.5",
     "webpack": "^1.13.1"
