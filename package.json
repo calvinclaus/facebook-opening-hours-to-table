@@ -3,7 +3,8 @@
   "description": "Generates an html table from Facebook page opening hours data, such that days with equal opening hours are on one table row.  ",
   "main": "build/entry.js",
   "scripts": {
-    "test": "mocha './src/**/*.test.js' --watch  --compilers js:babel-core/register",
+    "test": "mocha './src/**/*.test.js' --compilers js:babel-core/register",
+    "testw": "mocha './src/**/*.test.js' --watch  --compilers js:babel-core/register",
     "clearBuild": "rimraf build",
     "build": "npm run clearBuild && webpack",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
