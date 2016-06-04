@@ -7,7 +7,7 @@ Generates an html table from Facebook page opening hours data, such that days wi
 [![downloads](https://img.shields.io/npm/dm/facebook-opening-hours-to-table.svg?style=flat)](http://npm-stat.com/charts.html?package=facebook-opening-hours-to-table&from=2015-08-01)
 [![MIT License](https://img.shields.io/npm/l/facebook-opening-hours-to-table.svg?style=flat)](http://opensource.org/licenses/MIT)
 
-![Open 24 hours](http://i.giphy!.com/d2VNLfm0VNWDv3wY.gif)
+![Open 24 hours](http://i.giphy.com/d2VNLfm0VNWDv3wY.gif)
 
 ## Installation
 
