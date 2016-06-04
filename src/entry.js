@@ -6,16 +6,7 @@ export function getTableWithHours(hours, translationDict) {
 }
 
 export function getIntervalsWithHours(hours, translationDict) {
-  totalyNewFunction();
   return getTranslatedIntervals(hours, translationDict, translationDict);
-}
-
-export function totalyNewFunction() {
-  return 1;
-}
-
-export function totalyNewFunction2() {
-  return 1;
 }
 
 function getTranslatedIntervals(hours, translationDict) {
