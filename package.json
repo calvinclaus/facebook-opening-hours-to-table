@@ -2,6 +2,7 @@
   "name": "facebook-opening-hours-to-table",
   "description": "Generates an html table from Facebook page opening hours data, such that days with equal opening hours are on one table row.  ",
   "main": "build/entry.js",
+  "version": "2.4.0",
   "scripts": {
     "test": "mocha './src/**/*.test.js' --watch  --compilers js:babel-core/register",
     "test:single": "istanbul cover -x *.test.js _mocha --  --compilers js:babel-core/register -R spec './src/tests/**/*.test.js'",
