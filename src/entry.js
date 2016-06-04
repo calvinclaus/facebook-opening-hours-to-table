@@ -11,7 +11,11 @@ export function getIntervalsWithHours(hours, translationDict) {
 }
 
 export function totalyNewFunction() {
-  return 0;
+  return 1;
+}
+
+export function totalyNewFunction2() {
+  return 1;
 }
 
 function getTranslatedIntervals(hours, translationDict) {
