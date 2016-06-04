@@ -7,7 +7,7 @@ Generates an html table from Facebook page opening hours data, such that days wi
 [![downloads](https://img.shields.io/npm/dm/facebook-opening-hours-to-table.svg?style=flat)](http://npm-stat.com/charts.html?package=facebook-opening-hours-to-table&from=2015-08-01)
 [![MIT License](https://img.shields.io/npm/l/facebook-opening-hours-to-table.svg?style=flat)](http://opensource.org/licenses/MIT)
 
-<iframe src="//giphy.com/embed/d2VNLfm0VNWDv3wY" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/season-2-the-simpsons-2x13-d2VNLfm0VNWDv3wY">via GIPHY</a></p>
+![Open 24 hours](http://i.giphy!.com/d2VNLfm0VNWDv3wY.gif)
 
 ## Installation
 
