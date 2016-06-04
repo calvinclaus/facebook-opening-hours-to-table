@@ -2,22 +2,26 @@ sudo: false
 language: node_js
 cache:
   directories:
-    - node_modules
+  - node_modules
 notifications:
   email: false
+deploy:
+  provider: npm
+  api_key:
+    secure: qNZaQuBqyCWZU0CdsPfTAZCYIzQM5Cc6LBg+cRoGljZV24GUhq7Idz/W7dh9ECBPTtrQRjvkUOHxtwoOHw4uV28L3tIVytmy7AoxLpHGs801JhXZTKxWjRMfbK3UMWEBKs2S4z/I3MDo5opO54Vfgu+c7IIlaynJs9POhmvqVvn5JRCD4U7wdUBA3FXchmHDJHwgJV7g/cKlTYbYlerSfcKpjoQqJNPHJ1h5NX45fsWGuYZ3RJETH6Nkusj5XnY+3/oLl7s0vl4d88ZBBxku7TBO1q6A7q4xkeJvNddqO/QjllSXCE1PHg5FEelgngUiB6++x0EJiQuveOWalPHclU8aH0AtZJewjRnCKXypMeWRtbfWwdZ4/F+KSxsbCsY3q7BoXFaKoBNXdZc79IQLkMj1M4zvEu+WesxaQ3YYCU7U/FaNbNNWEC9QSeEL7N0sNAKQFW+sdy7xFEOzCzr1jGan1jDbWkIVzxcht0JfSoAHztxfMTzjTYeJ1Xf4Y7PizT127+BWFP2++4AQgHVfckibH1vIz0AEDJYVTFwP/WnHgu4TjbGUAxePMeEh2wlCEypvZk7A2t9ezP4o8RmBOs56f1pCR2C2Zez3dOzLFwIpycnqeEcoD8jOshHxljlpPhRD99EgYfyjFor5hD56L3pLjGogMQaqg8bU++9+gK4=
 node_js:
-  - '4'
+- '4'
 before_install:
-  - npm i -g npm@^2.0.0
+- npm i -g npm@^2.0.0
 before_script:
-  - npm prune
+- npm prune
 script:
-  - npm run test:single
-  - npm run check-coverage
-  - npm run build
+- npm run test:single
+- npm run check-coverage
+- npm run build
 after_success:
-  - npm run report-coverage
-  - npm publish
+- npm run report-coverage
+- npm publish
 branches:
   except:
-    - /^v\d+\.\d+\.\d+$/
+  - /^v\d+\.\d+\.\d+$/
