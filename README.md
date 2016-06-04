@@ -20,7 +20,7 @@ npm i facebook-opening-hours-to-table
 It has no dependencies.
 
 ###Browser
-Get the file from [ https://npmcdn.com/facebook-opening-hours-to-table@2.4.2/build/ ]( https://npmcdn.com/facebook-opening-hours-to-table@2.4.2/build/ ) and put it in a script tag:
+Get the file from [https://npmcdn.com/facebook-opening-hours-to-table@2.4.6](https://npmcdn.com/facebook-opening-hours-to-table@2.4.6/build) and put it in a script tag:
 ```html
 <script src="entry.js"></script>
 //Functions now at facebookOpeningHoursToTable.getTableWithHours(hours, translationDict);
