@@ -21,7 +21,6 @@ script:
 - npm run build
 after_success:
 - npm run report-coverage
-- npm publish
 branches:
   except:
   - /^v\d+\.\d+\.\d+$/
