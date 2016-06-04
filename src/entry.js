@@ -12,7 +12,7 @@ export function getIntervalsWithHours(hours, translationDict) {
 function getTranslatedIntervals(hours, translationDict) {
   var intervals = getIntervals(hours);
   translateIntervals(intervals, translationDict);
-
+  console.log("HI");
   return intervals;
 }
 
