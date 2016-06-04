@@ -6,7 +6,12 @@ export function getTableWithHours(hours, translationDict) {
 }
 
 export function getIntervalsWithHours(hours, translationDict) {
+  _f();
   return getTranslatedIntervals(hours, translationDict, translationDict);
+}
+
+export function _f() {
+  return 0;
 }
 
 function getTranslatedIntervals(hours, translationDict) {
