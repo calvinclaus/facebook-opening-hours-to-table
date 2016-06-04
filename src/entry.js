@@ -41,7 +41,7 @@ function getIntervals(hours) {
 
 //German: {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"}
 function translateIntervals(intervals, translation) {
-  if (typeof translation === typeof undefined) return intervals;
+  if (typeof translation == typeof undefined) return intervals;
   for (var i = 0; i < intervals.length; i++) {
     intervals[i].to = translation[intervals[i].to];
     intervals[i].from = translation[intervals[i].from];
