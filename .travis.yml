@@ -24,6 +24,9 @@ script:
 - npm run build
 after_success:
 - npm run report-coverage
+before_deploy:
+- npm run build
+- ls 
 branches:
   except:
   - /^v\d+\.\d+\.\d+$/
