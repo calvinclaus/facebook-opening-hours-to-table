@@ -21,7 +21,7 @@ npm i facebook-opening-hours-to-table
 
 It has no dependencies.
 
-###Browser
+### Browser
 Get the file from [https://unpkg.com/facebook-opening-hours-to-table/build](https://unpkg.com/facebook-opening-hours-to-table/build) and put it in a script tag:
 ```html
 <script src="entry.umd.min.js"></script>
@@ -29,7 +29,7 @@ Get the file from [https://unpkg.com/facebook-opening-hours-to-table/build](http
 ```
 
 
-##Demo
+## Demo
 Facebook hours-data looks like this:
 ```json
 {
@@ -65,7 +65,7 @@ const table = getTableWithHoursData(yourFBHoursData, translationDict);
 //do stuff with table
 ```
 
-###Getting Intervals Data
+### Getting Intervals Data
 Use this method if you do not care for the table and just want the [intervals](#intervals) data.
 
 Fetch the opening hours data from Facebook and pass it to getIntervalsWithHours to get to the raw [intervals](#intervals) data:
@@ -76,7 +76,7 @@ var intervals = getIntervalsWithHours(yourFBHoursData, translationDict);
 //do stuff with intervals
 ```
 
-###Intervals:
+### Intervals:
 Intervals is an array of intervals that is created form the opening hours data. You can use it, if you do not want a table to be generated from the Facebook hours data, but still want days with equal opening hours be compressed into one array entry:
 
 ```javascript
@@ -127,14 +127,14 @@ var hours = {
 }
 ```
 
-###Translation:
+### Translation:
 Each method takes translationDict as an argument. This argument can be omitted if you are happy with Facebooks default "mon, tue,...".
 If not, you can supply a dictionary like so:
 ```javascript
 translationDict = {mon: "Mo", tue: "Di", wed: "Mi", thu: "Do", fri: "Fr", sat: "Sa", sun: "So"};
 ```
 
-##Example Usage
+## Example Usage
 ```javascript
 	$.ajax({
 		method: "GET",
