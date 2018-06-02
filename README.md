@@ -11,7 +11,7 @@ Generates an html table from Facebook page opening hours data, such that days wi
 
 ## Installation
 
-###npm
+### npm
 
 This package is distributed via npm:
 
@@ -54,7 +54,7 @@ And this library creates:
 
 ## Usage
 
-###Getting the table
+### Getting the table
 Use this method if you want an html table.
 
 Fetch the opening hours data from Facebook and pass it to getTableWithHours.
